@@ -1,29 +1,41 @@
-# Welcome to your Lovable project
+# Syllora
 
-This project was built with [Lovable](https://lovable.dev).
+Syllora is an AI-assisted learning platform designed to help students understand what they have learned, identify gaps against a syllabus, and organise their learning around subjects, units, and topics.
 
-## Build with Lovable
+## What Syllora does
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+- Organises subjects into units and individual topics.
+- Tracks topic-level learning progress.
+- Compares learning material against selected syllabus topics.
+- Classifies topics as **covered**, **partially covered**, or **missing**.
+- Calculates an overall syllabus coverage score.
+- Provides a foundation for future AI-powered document analysis and personalised learning recommendations.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+## Current prototype
 
-## Development
+The current repository is a frontend prototype. The syllabus catalogue and progress data are demo data, and the analysis layer currently uses deterministic prototype logic so demonstrations remain repeatable.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+The production version can replace this analysis layer with a document-processing and LLM pipeline without changing the core UI model.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## Tech Stack
 
-## Built with
-
-- TanStack Start
-- TypeScript
 - React
+- TypeScript
+- TanStack Start
+- TanStack Router
 - Tailwind CSS
+- Vite
+- React Query
+- Radix UI
+
+## Project Structure
+
+```text
+src/
+├── components/      Reusable UI and Syllora-specific components
+├── hooks/            React hooks
+├── lib/              Data models, state, analysis and utilities
+├── routes/           Application routes
+├── router.tsx        Router configuration
+├── server.ts         Server entry
+└── styles.css        Global styles
