@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import React from 'react';
+import { createRootRoute, Outlet } from '@tanstack/react-router';
+import { SylloraProvider } from '../lib/store';
+import { AppShell } from '../components/syollara/AppShell';
+
+export const Route = createRootRoute({
+  component: () => (
+    <SylloraProvider>
+      <AppShell>
+        <Outlet />
+      </AppShell>
+    </SylloraProvider>
+  ),
+});
+=======
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -122,3 +138,4 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410

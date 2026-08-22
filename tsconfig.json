@@ -1,4 +1,22 @@
 {
+<<<<<<< HEAD
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+=======
   "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts", "eslint.config.js"],
   "compilerOptions": {
     "target": "ES2022",
@@ -14,10 +32,20 @@
     "noEmit": true,
 
     "skipLibCheck": true,
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+<<<<<<< HEAD
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+=======
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -28,4 +56,5 @@
       "@/*": ["./src/*"]
     }
   }
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
 }
