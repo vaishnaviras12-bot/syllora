@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Syllora - AI-Assisted Syllabus Coverage & Learning Intelligence
 
 Syllora is an AI-assisted syllabus coverage and learning intelligence platform designed for university students. It bridges the gap between unstructured study notes and official university curricula by dynamically tracking topic coverage, highlighting missing concepts, and recommending target study areas for exams.
@@ -64,3 +65,46 @@ After launching, open the local dev URL shown in your terminal (typically `http:
 ## ℹ️ Prototype & AI Note
 
 This project is a standalone frontend hackathon prototype. The AI syllabus analysis engine operates entirely client-side using deterministic concept and keyword matching logic (`src/lib/ai-analysis.ts`) to provide instant, offline-capable demonstration feedback without external API dependencies.
+=======
+# Syllora
+
+Syllora is an AI-assisted learning platform designed to help students understand what they have learned, identify gaps against a syllabus, and organise their learning around subjects, units, and topics.
+
+## What Syllora does
+
+- Organises subjects into units and individual topics.
+- Tracks topic-level learning progress.
+- Compares learning material against selected syllabus topics.
+- Classifies topics as **covered**, **partially covered**, or **missing**.
+- Calculates an overall syllabus coverage score.
+- Provides a foundation for future AI-powered document analysis and personalised learning recommendations.
+
+## Current prototype
+
+The current repository is a frontend prototype. The syllabus catalogue and progress data are demo data, and the analysis layer currently uses deterministic prototype logic so demonstrations remain repeatable.
+
+The production version can replace this analysis layer with a document-processing and LLM pipeline without changing the core UI model.
+
+## Tech Stack
+
+- React
+- TypeScript
+- TanStack Start
+- TanStack Router
+- Tailwind CSS
+- Vite
+- React Query
+- Radix UI
+
+## Project Structure
+
+```text
+src/
+├── components/      Reusable UI and Syllora-specific components
+├── hooks/            React hooks
+├── lib/              Data models, state, analysis and utilities
+├── routes/           Application routes
+├── router.tsx        Router configuration
+├── server.ts         Server entry
+└── styles.css        Global styles
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410

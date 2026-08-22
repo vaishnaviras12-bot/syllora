@@ -10,16 +10,20 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+<<<<<<< HEAD
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as ProgressRouteImport } from './routes/progress'
 import { Route as SelectRouteImport } from './routes/select'
 import { Route as SyllabusRouteImport } from './routes/syllabus'
+=======
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+<<<<<<< HEAD
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
@@ -54,10 +58,19 @@ export interface FileRoutesByTo {
   '/progress': typeof ProgressRoute
   '/select': typeof SelectRoute
   '/syllabus': typeof SyllabusRoute
+=======
+
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+<<<<<<< HEAD
   '/dashboard': typeof DashboardRoute
   '/progress': typeof ProgressRoute
   '/select': typeof SelectRoute
@@ -69,14 +82,26 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/dashboard' | '/progress' | '/select' | '/syllabus'
   id: '__root__' | '/' | '/dashboard' | '/progress' | '/select' | '/syllabus'
+=======
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/'
+  id: '__root__' | '/'
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+<<<<<<< HEAD
   DashboardRoute: typeof DashboardRoute
   ProgressRoute: typeof ProgressRoute
   SelectRoute: typeof SelectRoute
   SyllabusRoute: typeof SyllabusRoute
+=======
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
 }
 
 declare module '@tanstack/react-router' {
@@ -88,6 +113,7 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+<<<<<<< HEAD
     '/dashboard': {
       id: '/dashboard'
       path: '/dashboard'
@@ -116,16 +142,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SyllabusRouteImport
       parentRoute: typeof rootRouteImport
     }
+=======
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+<<<<<<< HEAD
   DashboardRoute: DashboardRoute,
   ProgressRoute: ProgressRoute,
   SelectRoute: SelectRoute,
   SyllabusRoute: SyllabusRoute,
+=======
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+<<<<<<< HEAD
+=======
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
+>>>>>>> 34e7f9f8cf1629ba9848c49838794d40b2ab8410
